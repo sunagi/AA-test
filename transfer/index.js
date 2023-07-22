@@ -3,11 +3,6 @@ const utils = require('ethers').utils;
 const { Client, Presets } = require('userop');
 
 exports.handler = async function(event, context) {
-    console.log(ethers);
-    console.log(utils);
-    console.log(ethers.utils.getAddress("0xcED78cA7A824Da41863C7f79C86fb4739D1de2D7"));
-    console.log(event.to);
-
   const paymasterMiddleware = event.withPM
     ? Presets.Middleware.verifyingPaymaster(
         process.env.PAYMASTER_RPC_URL,
